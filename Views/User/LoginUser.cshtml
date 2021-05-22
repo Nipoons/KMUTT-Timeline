@@ -1,0 +1,42 @@
+@model IEnumerable<kmutt_x_covid.Models.User> 
+@using kmutt_x_covid.Models;
+@* @model kmutt_x_covid.Models.User *@
+@{
+    ViewData["Title"] = "Login";
+    Layout="~/Views/Shared/_LoginUsers.cshtml";
+}
+<body>
+    <div class="text-center">
+
+    <div class="card">
+        <div class="card-header">
+                <h3>Login</h3>
+        </div>
+        <div class="card-body">
+        <form  asp-action="LoginUser" method="POST">
+            <div style="margin-bottom: 1rem;">
+                Username: <input type="text" name="username"/>
+
+            </div>
+            <div>
+                Password: <input type="password" name="password">
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+                <label class="form-check-label" for="dropdownCheck2">
+                    Remember me
+                </label>
+            </div>
+            <div style="margin-top: 1rem;">
+                <input type="submit" value="Login" class="btn btn-dark"  style="margin-left: 0.5rem;"/>
+                <a class="btn btn-light text-dark" asp-area="" asp-controller="Account" asp-action="Create">Register</a>
+                
+            </div>
+            <hr/>
+                <h6 style="color: blue; font-size:1rem"><a href="#">Forgot password?</a></h6>
+
+        </form>
+        </div>
+    </div>
+</div>
+</body>

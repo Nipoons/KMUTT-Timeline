@@ -1,0 +1,78 @@
+@model IEnumerable<kmutt_x_covid.Models.BuildingStampIn> 
+
+@{
+    ViewData["Title"] = "Timeline";
+    Layout="~/Views/Shared/_Layout.cshtml";
+
+}
+<h2>All Data</h2>
+<form asp-controller="Admin" asp-action="TimelineAdmin"  >
+    <p>
+        <input type="text" name="id"/>
+        <input type="submit" value="Search" class="btn btn-dark" />
+    </p>
+</form>
+<hr>
+<div class="text-center">
+    
+    
+    <table class="table">
+        <thead>
+        <tr style="background-color: orange; border-radius:2rem">
+            <th>ID</th>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Building</th>
+            <th>Floors</th>
+        </tr>
+        </thead>
+        <tbody>
+            
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IdNavigation.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IdNavigation.Name)
+                    </td>
+                    <td>
+                        <span>
+                        @Html.DisplayFor(modelItem => item.TimeIn.Day)
+                        </span>/
+                        <span>
+                            @Html.DisplayFor(modelItem => item.TimeIn.Month)
+                        </span>/
+                        <span>
+                            @Html.DisplayFor(modelItem => item.TimeIn.Year)
+                        </span>
+                    </td>
+                    <td>
+                        <span>
+                            @Html.DisplayFor(modelItem => item.TimeIn.Hour)
+                        </span>:
+                        <span>
+                            @Html.DisplayFor(modelItem => item.TimeIn.Minute)
+                        </span>:
+                        <span>
+                            @Html.DisplayFor(modelItem => item.TimeIn.Second)
+                        </span>
+                    </td>
+                    
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Building.BuildingName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem=> item.Floors)
+                    </td>
+                    
+                   
+                    
+                
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

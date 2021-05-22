@@ -1,0 +1,155 @@
+@model kmutt_x_covid.Models.User;
+    
+@{    
+    ViewData["Title"] = "Edit";    
+    var mes =TempData["Edit"] as string;
+    Layout="~/Views/Shared/_Layout.cshtml";
+
+
+    
+}    
+@if(!string.IsNullOrEmpty(mes))
+{
+    <div class="alert alert-dismissible alert-success ">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <p>@mes</p>
+    </div>
+
+}
+<h2>Edit</h2>    
+
+<hr />    
+ <form asp-action="Edit"> 
+     <input asp-for="Id" hidden/>   
+<div class="center row">    
+    <div class="col-md-4">      
+            <div class="form-group">    
+                <label asp-for="Id" class="control-label" ></label>    
+                <input   asp-for="Id" class="form-control" />    
+                <span asp-validation-for="Id" class="text-danger"></span>    
+            </div>    
+            <div class="form-group">    
+                <label asp-for="Name" class="control-label"></label>      
+                <input   asp-for="Name" class="form-control"  />   
+                <span asp-validation-for="Name" class="text-danger"></span>    
+            </div>    
+            <div class="form-group">    
+                <label asp-for="Phone" class="control-label"></label>    
+                <input   asp-for="Phone" class="form-control" />    
+                <span asp-validation-for="Phone" class="text-danger"></span>    
+            </div>   
+            <div class="form-group">    
+                <label asp-for="Email" class="control-label"></label>    
+                <input   asp-for="Email" class="form-control" />    
+                <span asp-validation-for="Email" class="text-danger"></span>    
+            
+            </div>   
+            <div class="form-group">    
+                <label asp-for="Department" class="control-label"></label>    
+                <input   asp-for="Department" class="form-control"  />    
+                <span asp-validation-for="Department" class="text-danger"></span>    
+            </div>   
+            
+            
+            <div class="form-group">    
+                <input type="submit" value="Update" class="btn btn-primary alte alert-success" />    
+            </div>    
+    </div> 
+            
+    <div class="col-md-4">
+         <div class="form-group">    
+                <label asp-for="RiskId" class="control-label"></label>    
+                <input type="number" min="0" max="4" asp-for="RiskId" class="form-control" />
+                <span asp-validation-for="Risk" class="text-danger"></span>    
+                <h6 style="color: red;">* 0 is  infection <span style="color: black;">/</span> * 1 is High</h6> 
+                <h6 style="color: orangered;">* 2 is  Moderate 
+                    <span style="color: black;">/</span><span style="color: orangered;"> * 3 is Low</span>
+                    <span style="color: black;">/</span><span style="color:orangered;"> * 4 is None</span>  
+                </h6>
+            </div>   
+            <div class="form-group">    
+                <label asp-for="PositionId" class="control-label"></label>    
+                <input type="number" min="1" max="2"  asp-for="PositionId" class="form-control"  />    
+                <span asp-validation-for="PositionId" class="text-danger"></span>   
+                <h6 style="color: red;">* 1 is Admin <span style="color: black;">/</span> * 2 is User</h6> 
+                
+            </div>   
+           
+        
+    </div>   
+</div>    
+<div>    
+    </form> 
+
+@section Scripts {    
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}    
+}   
+
+
+
+
+@* <div class="row">    
+    <div class="col-md-4">    
+        <form method="POST">   
+            <div class="row">
+                <div class="col-4">
+                     <input type="hidden" asp-for="Id" />    
+             <div class="form-group">    
+                <label asp-for="Id" class="control-label" ></label>    
+                <input id="go"  asp-for="Id" class="form-control" />    
+                <span asp-validation-for="Id" class="text-danger"></span>    
+            </div>    
+            <div class="form-group">    
+                <label asp-for="Name" class="control-label"></label>      
+                <input id="go"  asp-for="Name" class="form-control"  />   
+                <span asp-validation-for="Name" class="text-danger"></span>    
+            </div>    
+            <div class="form-group">    
+                <label asp-for="Phone" class="control-label"></label>    
+                <input id="go"  asp-for="Phone" class="form-control"/>    
+                <span asp-validation-for="Phone" class="text-danger"></span>    
+            </div>   
+            <div class="form-group">    
+                <label asp-for="Email" class="control-label"></label>    
+                <input id="go"  asp-for="Email" class="form-control" />    
+                <span asp-validation-for="Email" class="text-danger"></span>    
+            </div>   
+            <div class="form-group">    
+                <label asp-for="Department" class="control-label"></label>    
+                <input id="go"  asp-for="Department" class="form-control" />    
+                <span asp-validation-for="Department" class="text-danger"></span>    
+            </div>    
+            <div class="form-group">    
+                <label asp-for="Risk" class="control-label"></label>  
+                <div>
+                <input asp-for="Risk" class="form-control" value="4" /> <span><p style="color: red;">* if infection input 0</p>  </span>  
+
+                </div> 
+                <span asp-validation-for="Risk" class="text-danger"></span>    
+            </div>   
+            
+            
+
+            </div>
+                <div class="col-4">
+                        <div class="form-group">    
+                            <label asp-for="Username" class="control-label"></label>    
+                            <input asp-for="Username" class="form-control" /> 
+                            <span asp-validation-for="Username" class="text-danger"></span>    
+                        </div>   
+                        <div class="form-group">    
+                            <label asp-for="Password" class="control-label"></label>    
+                            <input  asp-for="Password" class="form-control"/>    
+                            <span asp-validation-for="Password" class="text-danger"></span>    
+                        </div>    
+
+                </div>
+                <div class="form-group">    
+                <input type="submit" value="Update" class="btn btn-primary" />    
+            </div>    
+            </div>
+            
+           
+        </form>    
+    </div>    
+</div>       *@

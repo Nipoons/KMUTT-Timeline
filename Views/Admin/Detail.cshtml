@@ -1,0 +1,48 @@
+@model kmutt_x_covid.Models.User
+
+@{
+    ViewData["Title"] = "Timeline";
+    @* var mes =TempData["Message"] as string; *@
+    Layout="~/Views/Shared/_Layout.cshtml";
+
+
+    
+}
+
+@* @if(!string.IsNullOrEmpty(mes))
+{
+    <div class="alert alert-dismissible alert-success ">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <p>@mes</p>
+    </div>
+
+} *@
+<div class="row">
+    
+    <div class="col pd-2">
+                <div class="card">
+                    <div class="card-head" style="padding:1rem;">
+                        <h3>Information</h3>
+                    </div>
+                    <hr/>
+                    <div class="card-body">
+           
+                <h5>Id: @Html.DisplayFor(modelItem => Model.Id)</h5>
+                <h5>Name: @Html.DisplayFor(modelItem => Model.Name)</h5>
+                <h5>Phone: @Html.DisplayFor(modelItem => Model.Phone)</h5>
+                <h5>Email: @Html.DisplayFor(modelItem => Model.Email)</h5>
+                <h5>Department: @Html.DisplayFor(modelItem => Model.Department)</h5>
+                <h5>Risk level:@Html.DisplayFor(modelItem => Model.Risk.RiskLevel)</h5>
+            
+                    </div>
+                    
+                        <a asp-controller="Admin" asp-action="Edit" asp-route-Id="@Model.Id" class="btn btn-primary">Edit</a>
+                    
+                    
+                </div>
+            </div>
+
+    </div>
+</div>
+
+<hr>

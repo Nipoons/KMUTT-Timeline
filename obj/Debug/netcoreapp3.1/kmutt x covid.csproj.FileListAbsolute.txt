@@ -1,0 +1,99 @@
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/appsettings.Development.json
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/appsettings.json
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/kmutt x covid.deps.json
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/kmutt x covid.runtimeconfig.json
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/kmutt x covid.runtimeconfig.dev.json
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/kmutt x covid.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/kmutt x covid.pdb
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/kmutt x covid.Views.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/kmutt x covid.Views.pdb
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/Humanizer.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Design.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.SqlServer.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Abstractions.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Memory.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Options.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Primitives.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/Microsoft.Identity.Client.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Logging.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Tokens.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/System.Collections.Immutable.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/System.ComponentModel.Annotations.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/System.Configuration.ConfigurationManager.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/System.Diagnostics.DiagnosticSource.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/System.IdentityModel.Tokens.Jwt.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/System.Runtime.Caching.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/System.Security.Cryptography.ProtectedData.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.pdb
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.pdb
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.pdb
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.pdb
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/kmutt x covid.csprojAssemblyReference.cache
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/kmutt x covid.AssemblyInfoInputs.cache
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/kmutt x covid.AssemblyInfo.cs
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/kmutt x covid.csproj.CoreCompileInputs.cache
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/kmutt x covid.MvcApplicationPartsAssemblyInfo.cache
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/kmutt x covid.RazorAssemblyInfo.cache
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/kmutt x covid.RazorAssemblyInfo.cs
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/kmutt x covid.TagHelpers.input.cache
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/kmutt x covid.TagHelpers.output.cache
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/kmutt x covid.RazorCoreGenerate.cache
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/Razor/Views/Shared/Error.cshtml.g.cs
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/Razor/Views/_ViewImports.cshtml.g.cs
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/Razor/Views/_ViewStart.cshtml.g.cs
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/kmutt x covid.RazorTargetAssemblyInfo.cache
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/kmutt x covid.RazorTargetAssemblyInfo.cs
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/kmutt x covid.Views.pdb
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/kmutt x covid.csproj.CopyComplete
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/staticwebassets/kmutt x covid.StaticWebAssets.Manifest.cache
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/staticwebassets/kmutt x covid.StaticWebAssets.xml
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/kmutt x covid.dll
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/kmutt x covid.pdb
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/kmutt x covid.genruntimeconfig.cache
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_LoginPartial.cshtml.g.cs
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/scopedcss/bundle/kmutt x covid.styles.css
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/kmutt x covid.StaticWebAssets.xml
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Cryptography.Internal.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Identity.Core.dll
+/Users/nipun/Desktop/kmutt x covid/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Identity.Stores.dll
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_LoginUsers.cshtml.g.cs
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_LayoutUser.cshtml.g.cs
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/Razor/Views/Admin/Detail.cshtml.g.cs
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/Razor/Views/Admin/Edit.cshtml.g.cs
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/Razor/Views/Admin/indexAdmin.cshtml.g.cs
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/Razor/Views/Admin/InfectionAdmin.cshtml.g.cs
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/Razor/Views/Admin/LoginAdmin.cshtml.g.cs
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/Razor/Views/Admin/TimelineAdmin.cshtml.g.cs
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/Razor/Views/User/Create.cshtml.g.cs
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/Razor/Views/User/Delete.cshtml.g.cs
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/Razor/Views/User/DetailUser.cshtml.g.cs
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/Razor/Views/User/EditUser.cshtml.g.cs
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/Razor/Views/User/indexUser.cshtml.g.cs
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/Razor/Views/User/Infection.cshtml.g.cs
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/Razor/Views/User/LoginUser.cshtml.g.cs
+/Users/nipun/Desktop/kmutt x covid/obj/Debug/netcoreapp3.1/Razor/Views/User/Timeline.cshtml.g.cs

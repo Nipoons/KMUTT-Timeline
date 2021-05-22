@@ -1,0 +1,48 @@
+@model IEnumerable<kmutt_x_covid.Models.User> 
+
+@{
+    ViewData["Title"] = "Timeline";
+    @* var mes =TempData["Message"] as string; *@
+    Layout="~/Views/Shared/_LayoutUser.cshtml";
+
+
+    
+}
+
+@* @if(!string.IsNullOrEmpty(mes))
+{
+    <div class="alert alert-dismissible alert-success ">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <p>@mes</p>
+    </div>
+
+} *@
+<div class="row">
+    
+    <div class="col pd-2">
+                <div class="card">
+                    <div class="card-head">
+                        <h3>Information</h3>
+                    </div>
+                    <hr/>
+                    <div class="card-body">
+                        <h5>Id: @ViewBag.id</h5>
+                        <h5>Name: @ViewBag.n</h5>
+                        <h5>Phone: @ViewBag.phone</h5>
+                        <h5>Email: @ViewBag.email</h5>
+                        <h5>Username: @ViewBag.Username</h5>
+                        <h5>Password: @ViewBag.password</h5>
+                        <h5>Risk level: @ViewBag.risk</h5>
+                    </div>
+                    @foreach (var item in Model)
+                    {
+                        <button asp-controller="Home" asp-action="EditUser" asp-route-Id="@item.Id" class="btn btn-primary">Edit</button>
+                    }
+                    
+                </div>
+            </div>
+
+    </div>
+</div>
+
+<hr>

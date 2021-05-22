@@ -1,0 +1,69 @@
+@model kmutt_x_covid.Models.User
+    
+@{    
+    ViewData["Title"] = "Create";    
+    Layout="~/Views/Shared/_LoginPartial.cshtml";
+}    
+
+
+<h2>Register</h2>      
+<hr />    
+        <form asp-action="Create">    
+<div class="center row">    
+    <div class="col-md-4">    
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>    
+            <div class="form-group">    
+                <label asp-for="Id" class="control-label" ></label>    
+                <input id="go" value="" asp-for="Id" class="form-control" placeholder="ID"/>    
+                <span asp-validation-for="Id" class="text-danger"></span>    
+            </div>    
+            <div class="form-group">    
+                <label asp-for="Name" class="control-label"></label>      
+                <input id="go" value="" asp-for="Name" class="form-control" placeholder="Full name" />   
+                <span asp-validation-for="Name" class="text-danger"></span>    
+            </div>    
+            <div class="form-group">    
+                <label asp-for="Phone" class="control-label"></label>    
+                <input id="go" value="" asp-for="Phone" class="form-control" placeholder="xxx-xxx-xxxx"/>    
+                <span asp-validation-for="Phone" class="text-danger"></span>    
+            </div>   
+            <div class="form-group">    
+                <label asp-for="Email" class="control-label"></label>    
+                <input id="go" value="" asp-for="Email" class="form-control" placeholder="xxxx@gmail.com"/>    
+                <span asp-validation-for="Email" class="text-danger"></span>    
+            </div>   
+            <div class="form-group">    
+                <label asp-for="Department" class="control-label"></label>    
+                <input id="go" value="" asp-for="Department" class="form-control" value="" placeholder="ex.Automation engineering" />    
+                <span asp-validation-for="Department" class="text-danger"></span>    
+            </div>    
+
+            <div class="form-group">    
+                <input type="submit" value="Create" class="btn btn-primary alte alert-success" />    
+            </div>    
+
+    </div> 
+            
+    <div class="col-md-4">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>    
+            <div class="form-group">    
+                <label asp-for="Username" class="control-label"></label>    
+                <input id="go" value="" asp-for="Username" class="form-control" placeholder="Username" /> 
+                <span asp-validation-for="Username" class="text-danger"></span>    
+            </div>   
+            <div class="form-group">    
+                <label asp-for="Password" class="control-label"></label>    
+                <input id="go" value="" asp-for="Password" class="form-control" placeholder="Password"/>    
+                <span asp-validation-for="Password" class="text-danger"></span>    
+            </div>    
+        
+    </div>   
+</div>    
+<div>    
+    </form> 
+    <a asp-controller="Account" asp-action="LoginUser">Back to Login</a>    
+</div>    
+@section Scripts {    
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}    
+}

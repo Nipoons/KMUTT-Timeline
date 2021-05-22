@@ -1,0 +1,87 @@
+@model IEnumerable<kmutt_x_covid.Models.User>;
+@{
+    string edit = ViewBag.Edit;
+}
+@if(!string.IsNullOrEmpty(edit))
+{
+    <div class="alert alert-dismissible alert-success ">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <p>@edit</p>
+    </div>
+
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 class="container-center">Welcome to Admin site</h3>
+    <div class="row">
+        <div class="col-6">
+
+        </div>
+        <div class="col-6">
+
+        </div>
+
+    </div>
+    <div class="row">
+        <table class="table">
+            <thead>
+            <tr style="background-color: orange; border-radius:2rem">
+                <th>Id</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Risk level</th>
+                <th>Role</th>
+
+                <th></th>
+            
+            </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Phone)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem=> item.Email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem=> item.Risk.RiskLevel)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem=> item.Position.PositionType)
+                        </td>
+                        <td class="text-center">
+                            <div >
+                                <a asp-controller="Admin" asp-action="Detail" asp-route-Id="@item.Id" class="btn btn-warning">Detail</a>
+                                <a asp-controller="Admin" asp-action="Edit" asp-route-Id="@item.Id" class="btn btn-primary">Edit</a>
+                                @* <a asp-controller="Admin" asp-action="Delete" asp-route-Id="@item.Id" class="btn btn-Danger" method =>Delete</a> *@
+                            
+                            </div>
+                        </td>
+                    
+                    </tr>
+                }
+
+            </tbody>
+
+        </table>
+    </div>
+
+</body>
+</html>
