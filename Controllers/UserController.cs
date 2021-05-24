@@ -292,11 +292,6 @@ namespace kmutt_x_covid.Controllers
             return View(data.ToList());
         }
 
-       
-
-       
-        
-
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
