@@ -3,6 +3,8 @@
 @{    
     ViewData["Title"] = "Edit";    
     var mes =TempData["Edit"] as string;
+    Layout="~/Views/Shared/_LayoutUser.cshtml";
+
 
     
 }    
@@ -17,7 +19,7 @@
 <h2>Edit</h2>    
 
 <hr />    
- <form asp-action="Edit"> 
+ <form asp-action="EditUser"> 
      <input asp-for="Id" hidden/>   
 <div class="center row">    
     <div class="col-md-4">      

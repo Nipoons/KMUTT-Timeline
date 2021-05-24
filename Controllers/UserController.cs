@@ -150,62 +150,48 @@ namespace kmutt_x_covid.Controllers
       
 
 [HttpGet]  
-        public IActionResult Edit(string Id)  
+        public IActionResult EditUser(string Id)  
         {  
+            
             if(Id==null)
             {
                 return NotFound();
             }
             var obj = _serverContext.Users.Find(Id);
+            var data = _serverContext.Users.Where(i=>i.Name == Id);
+            
             if(obj==null){
                 return NotFound();
+            }
+            foreach (var item in data)
+            {
+                ViewBag.n = item.Name;
+                
             }
             return View(obj);  
         }  
 
         [HttpPost]  
         [ValidateAntiForgeryToken]  
-        public IActionResult Edit(User users)  
+        public IActionResult EditUser(User users)  
         {  
             var user = _serverContext.Users.SingleOrDefault(o => o.Id == users.Id);
+            var iduser= users.Id.ToString();
+        
             var data_user1 = from i in _serverContext.BuildingStampIns.Include(i=>i.Building).Include(i => i.IdNavigation)
-                            where i.IdNavigation.Id == users.Id
+                            where i.IdNavigation.Id == iduser
                             select i;
             var data_user2 = from i in _serverContext.BuildingStampIns.Include(i=>i.Building).Include(i => i.IdNavigation)
-                            where i.IdNavigation.Id != users.Id
+                            where i.IdNavigation.Id != users.Id && i.IdNavigation.RiskId!=0
                             select i;
-                            // select new { Id=i.IdNavigation.Id, Building =i.Building.BuildingId, date = i.TimeIn.Date};
-            
+           
+            var data_user4 = from i in _serverContext.BuildingStampIns.Include(i=>i.Building).Include(i => i.IdNavigation)
+                            where i.IdNavigation.RiskId !=0 && i.IdNavigation.RiskId !=1
+                            select i;
+                        
 
             if(user != null)
             {
-                
-                if(users.RiskId==0)
-                {
-                    foreach(var i in data_user1 )
-                    {
-                        
-                        foreach(var j in data_user2)
-                        {
-                            if(j.IdNavigation.RiskId!=0 && j.Building.BuildingId== i.Building.BuildingId && j.TimeIn.Date==i.TimeIn.Date)
-                            {
-                                user.Id = users.Id;
-                                user.Name = users.Name;
-                                user.Phone = users.Phone;
-                                user.Email = users.Email;
-                                user.Department = users.Department;
-                                user.RiskId = 1;
-                                _serverContext.Users.Update(user);
-                                _serverContext.SaveChanges(); 
-                            }
-
-                        }
-
-                    }
-                
-                }
-                else
-                {
                     user.Id = users.Id;
                     user.Name = users.Name;
                     user.Phone = users.Phone;
@@ -213,11 +199,39 @@ namespace kmutt_x_covid.Controllers
                     user.Department = users.Department;
                     user.RiskId = users.RiskId;
                     _serverContext.Users.Update(user);
-                    _serverContext.SaveChanges();
+                
+                if(users.RiskId==0)
+                {
+                    var dataUser = _serverContext.BuildingStampIns.Include(u=>u.IdNavigation);
+                    
+                foreach(var i in data_user2.ToList()) 
+                {
+                    
+                        foreach(var j in data_user1.ToList()) 
+                        {
+                            if(i.BuildingId == j.BuildingId && i.TimeIn.Date==j.TimeIn.Date && j.Floors==i.Floors) 
+                            {
+                                var obj=_serverContext.Users.Find(i.IdNavigation.Id);
+                                obj.RiskId= 1;
+                                _serverContext.Users.Update(obj);
+
+                            }
+                        
+                        }
+
+                    
+                
                 }
+
+                }
+                else
+                {
+
+                }
+                        _serverContext.SaveChanges(); 
             }
                 TempData["Edit"]="Edit success!"; //sender value between controller with action
-        return RedirectToAction("IndexAdmin","User");  
+        return RedirectToAction("IndexUser","User");  
         }
         
         
@@ -257,8 +271,8 @@ namespace kmutt_x_covid.Controllers
 
         public IActionResult Infection()
         {
-            // ViewBag.n = TempData["name"].ToString();
-            // TempData.Keep();
+            ViewBag.n = TempData["name"].ToString();
+            TempData.Keep();
 
             var data = from m in _serverContext.BuildingStampIns.Include(b =>b.Building).Include(u=>u.IdNavigation)
                         where m.IdNavigation.RiskId==0

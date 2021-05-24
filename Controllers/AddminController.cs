@@ -43,38 +43,12 @@ namespace kmutt_x_covid.Controllers
         [ValidateAntiForgeryToken]  
         public  IActionResult LoginAdmin(string username , string password)
         {
-            var data_check = from i in _serverContext.Users.Include(i=>i.Risk) 
+            var data = from i in _serverContext.Users.Include(i=>i.Risk) 
                             where i.Username == username && i.Password == password && i.PositionId == 1
-                            select new {name=i.Name,
-                                        id=i.Id,
-                                        userId=i.Username, 
-                                        password=i.Password,
-                                        email = i.Email,
-                                        phone = i.Phone,
-                                        risk = i.Risk.RiskLevel,
-                                        position = i.Position};
-            var data = from m in _serverContext.BuildingStampIns.Include(b =>b.Building).Include(u=>u.IdNavigation)           
-                        select m;
-            var check = data_check.SingleOrDefault();
-            
-            if(check==null)
+                            select i;
+            if(data==null)
             {
                 return NotFound();
-            }
-
-            foreach(var data1 in data_check)
-            {
-                ViewBag.pass=data1.id;
-                TempData["name"] = data1.name;
-                TempData["id"] = data1.id;
-                TempData["Email"] = data1.email;
-                TempData["Phone"]=data1.phone;
-                TempData["Risk"]=data1.risk;
-                ViewBag.id=data1.id;
-                data = from j in data 
-                    where j.IdNavigation.Id == data1.id
-                    select j;
-                
             }
         return RedirectToAction("IndexAdmin","Admin");
             
@@ -114,22 +88,59 @@ namespace kmutt_x_covid.Controllers
         public IActionResult Edit(User users)  
         {  
             var user = _serverContext.Users.SingleOrDefault(o => o.Id == users.Id);
+            var iduser= users.Id.ToString();
+        
+            var data_user1 = from i in _serverContext.BuildingStampIns.Include(i=>i.Building).Include(i => i.IdNavigation)
+                            where i.IdNavigation.Id == iduser
+                            select i;
+            var data_user2 = from i in _serverContext.BuildingStampIns.Include(i=>i.Building).Include(i => i.IdNavigation)
+                            where i.IdNavigation.Id != users.Id && i.IdNavigation.RiskId!=0
+                            select i;
+
+            var data_user4 = from i in _serverContext.BuildingStampIns.Include(i=>i.Building).Include(i => i.IdNavigation)
+                            where i.IdNavigation.RiskId !=0 && i.IdNavigation.RiskId !=1
+                            select i;
+                        
 
             if(user != null)
             {
+                    user.Id = users.Id;
+                    user.Name = users.Name;
+                    user.Phone = users.Phone;
+                    user.Email = users.Email;
+                    user.Department = users.Department;
+                    user.RiskId = users.RiskId;
+                    _serverContext.Users.Update(user);
                 
-                user.Id = users.Id;
-                user.Name = users.Name;
-                user.Phone = users.Phone;
-                user.Email = users.Email;
-                user.Department = users.Department;
-                user.RiskId = users.RiskId;
-                user.PositionId = users.PositionId;
+                if(users.RiskId==0)
+                {
+                    var dataUser = _serverContext.BuildingStampIns.Include(u=>u.IdNavigation);
+                    
+                foreach(var i in data_user2.ToList()) 
+                {
+                    
+                        foreach(var j in data_user1.ToList()) 
+                        {
+                            if(i.BuildingId == j.BuildingId && i.TimeIn.Date==j.TimeIn.Date && j.Floors==i.Floors) 
+                            {
+                                var obj=_serverContext.Users.Find(i.IdNavigation.Id);
+                                obj.RiskId= 1;
+                                _serverContext.Users.Update(obj);
+
+                            }
+                        
+                        }
+                
+                }
+
+                }
+                else
+                {
+
+                }
+                        _serverContext.SaveChanges(); 
             }
                 TempData["Edit"]="Edit success!"; //sender value between controller with action
-
-            _serverContext.Users.Update(user);
-            _serverContext.SaveChanges(); // commit to database
 
         return RedirectToAction("IndexAdmin","Admin");  
         }
@@ -183,7 +194,6 @@ namespace kmutt_x_covid.Controllers
             foreach (var item in infect)
             {
                 var test = item.date.AddDays(-1);
-                Console.WriteLine(test);
                 data=data.Where(i=> i.TimeIn > item.date.AddDays(-14)&&i.TimeIn < item.date);
                 
             }
